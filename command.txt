@@ -1,0 +1,68 @@
+// OS commands
+
+
+// to chk how much is free
+free -h
+
+lscpu # cpu
+
+// disk partition
+df -h #disk
+
+// os version
+cat /etc/os-release
+
+docker --version
+docker pull nginx
+
+// to see images which are available
+docker images
+
+// list images
+docker image ls
+docker container ls -a
+
+// docker proceeses
+docker ps -a
+# -a active 
+
+// cmd to run docker
+docker run --name nginx -p 80:80 nginx
+# -- name : means any name of container is possible with same image
+docker run --name nginx -p 8000:80 -d nginx
+# -d daemon mode
+
+docker run -it --name nginx -p 8000:80 -d nginx
+
+// to run
+docker start nginx 
+docker stop nginx
+
+// to remove a container
+docker rm nginx
+# to remove by force
+docker rm -f nginx
+
+
+
+// to chk contetn of web page 
+ curl http://localhost:8000
+
+
+// log files of nginx contianer
+ docker logs -f nginx
+ # -f follow
+
+// how to do inside docker
+docker exec -it nginx bash
+
+// to chk content of web page inside container
+curl http://localhost
+curl http://localhost:80
+
+for https : 443
+http:80
+
+
+// to login in docker
+docker login
