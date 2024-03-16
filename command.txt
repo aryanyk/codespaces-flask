@@ -3,14 +3,18 @@
 
 // to chk how much is free
 free -h
+-h:: human readable form 
+
 
 lscpu # cpu
+-tells about cpu 
 
 // disk partition
-df -h #disk
+df -h #disk space
 
 // os version
 cat /etc/os-release
+use tab to auto complete
 
 docker --version
 docker pull nginx
@@ -25,6 +29,10 @@ docker container ls -a
 // docker proceeses
 docker ps -a
 # -a active 
+
+// to create automatically container with auto name with samllest version of linux
+$ docker run -itd -p 8090:80 nginx:alpine
+
 
 // cmd to run docker
 docker run --name nginx -p 80:80 nginx
@@ -42,7 +50,15 @@ docker stop nginx
 docker rm nginx
 # to remove by force
 docker rm -f nginx
+docker rm -f id(first 3-2 letters)   another id  another id
+helps to delelete multiples container at once
 
+//docker ps
+to show all the images running
+
+
+// docker logs -f nginx
+-f follow  followed by container name
 
 
 // to chk contetn of web page 
@@ -66,3 +82,9 @@ http:80
 
 // to login in docker
 docker login
+
+
+
+
+//docker initialization
+docker init
